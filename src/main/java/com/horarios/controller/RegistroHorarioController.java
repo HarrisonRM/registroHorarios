@@ -1,8 +1,8 @@
 // controller/RegistroHorarioController.java
 package com.horarios.controller;
 
-import com.horarios.horarios.modulo.RegistroHorario;
-import com.horarios.horarios.repository.RegistroHorarioRepository;
+import com.horarios.modelo.RegistroHorario;
+import com.horarios.repository.RegistroHorarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

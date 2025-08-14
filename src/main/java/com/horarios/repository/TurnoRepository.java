@@ -1,6 +1,6 @@
 
-package com.horarios.horarios.repository;
-import com.horarios.horarios.modulo.Turno;
+package com.horarios.repository;
+import com.horarios.modelo.Turno;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
