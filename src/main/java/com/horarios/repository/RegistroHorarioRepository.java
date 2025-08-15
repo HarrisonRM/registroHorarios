@@ -9,5 +9,7 @@ import com.horarios.modelo.RegistroHorario;
 @Repository
 public interface RegistroHorarioRepository extends JpaRepository<RegistroHorario, Long> {
 
+	RegistroHorario findByName(String nombre);
+
 	
 } 

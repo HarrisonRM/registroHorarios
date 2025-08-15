@@ -16,7 +16,6 @@ public class Turno {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String nombre;
     private LocalTime horaInicio;
     private LocalTime horaFin;

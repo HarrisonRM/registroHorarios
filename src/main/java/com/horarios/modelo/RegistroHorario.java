@@ -15,12 +15,9 @@ public class RegistroHorario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    private String name;
     private LocalDate fecha;
     private LocalTime hora;
     private String tipo; // "entrada" o "salida"
-
-    @ManyToOne
-    @JoinColumn(name = "empleado_id")
-    private Empleado empleado;
+    private String empleado;
 }
