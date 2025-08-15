@@ -1,13 +1,13 @@
 package com.horarios.repository;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
-public class RegistroHorarioRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-	public static void main(String[] args) {
-		SpringApplication.run(RegistroHorarioRepository.class, args);
-	}
+import com.horarios.modelo.RegistroHorario;
 
-}
+@Repository
+public interface RegistroHorarioRepository extends JpaRepository<RegistroHorario, Long> {
+
+	
+} 

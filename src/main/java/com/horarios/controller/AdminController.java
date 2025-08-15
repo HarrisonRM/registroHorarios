@@ -13,15 +13,15 @@ import java.util.List;
 public class AdminController {
 
     @Autowired
-    private AdminRepository AdminRepository;
+    private AdminRepository adminRepository;
 
     @GetMapping
     public List<Admin> obtenerTodos() {
-        return AdminRepository.findAll();
+        return adminRepository.findAll();
     }
 
     @PostMapping
-    public Admin crearAdmin(@RequestBody Admin admin) {
-        return adminRepository.save(admin);
+    public Admin crearAdmin(@RequestBody Admin nueAdmin) {
+        return adminRepository.save(nueAdmin);
     }
 }
