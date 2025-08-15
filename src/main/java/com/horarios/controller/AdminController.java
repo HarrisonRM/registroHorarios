@@ -25,7 +25,3 @@ public class AdminController {
         return adminRepository.save(admin);
     }
 }
-java
-Copiar
-Editar
-
