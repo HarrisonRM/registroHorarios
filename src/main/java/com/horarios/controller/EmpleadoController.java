@@ -1,5 +1,5 @@
 package com.horarios.controller;
-import com.horarios.modelo.Empleado;
+import com.horarios.model.Empleado;
 import com.horarios.repository.EmpleadoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

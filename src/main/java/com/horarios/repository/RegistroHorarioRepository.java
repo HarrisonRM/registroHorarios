@@ -4,7 +4,7 @@ package com.horarios.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.horarios.modelo.RegistroHorario;
+import com.horarios.model.RegistroHorario;
 
 @Repository
 public interface RegistroHorarioRepository extends JpaRepository<RegistroHorario, Long> {

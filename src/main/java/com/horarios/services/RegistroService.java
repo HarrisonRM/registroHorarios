@@ -2,7 +2,7 @@ package com.horarios.services;
 
 import java.util.List;
 
-import com.horarios.modelo.RegistroHorario;
+import com.horarios.model.RegistroHorario;
 
 public interface RegistroService {
 

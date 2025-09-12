@@ -1,6 +1,6 @@
 package com.horarios.controller;
 
-import com.horarios.modelo.Turno;
+import com.horarios.model.Turno;
 import com.horarios.repository.TurnoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

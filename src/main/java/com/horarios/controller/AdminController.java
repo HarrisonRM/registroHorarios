@@ -1,6 +1,6 @@
 package com.horarios.controller;
 
-import com.horarios.modelo.Admin;
+import com.horarios.model.Admin;
 import com.horarios.repository.AdminRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
