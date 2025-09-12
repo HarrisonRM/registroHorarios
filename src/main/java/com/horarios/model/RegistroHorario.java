@@ -50,4 +50,24 @@ public class RegistroHorario {
    @JoinColumn(name = "turno_id", nullable = false)
    private Turno shift;
 
+   public Object getFecha() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'getFecha'");
+   }
+
+   public String getEmpleado() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'getEmpleado'");
+   }
+
+   public Object getHora() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'getHora'");
+   }
+
+   public Object getTipo() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'getTipo'");
+   }
+
 }
