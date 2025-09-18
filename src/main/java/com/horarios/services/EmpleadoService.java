@@ -1,5 +1,14 @@
 package com.horarios.services;
+import com.horarios.model.Empleado;
+import java.util.List;
+import java.util.Optional;
 
-public class EmpleadoService {
-    
+public interface EmpleadoService {
+    List<Empleado> getAllEmpleados();
+    Optional<Empleado> getEmpleadoById(Long id);
+    Empleado createEmpleado(Empleado empleado);
+    Empleado updateEmpleado(Long id, Empleado empleadoDetails);
+    void deleteEmpleado(Long id);
+    List<String> getPrivileges();
+
 }

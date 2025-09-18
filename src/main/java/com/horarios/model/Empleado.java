@@ -14,12 +14,6 @@ public class Empleado {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // private String nombre;
-    // private String documento;
-    // private String cargo;
-    // private String password;
-
-
     @Column(name="nombre", length=50, nullable = false)
     private String name;
     @Column(name="documento", length=50, nullable = false, unique = true)

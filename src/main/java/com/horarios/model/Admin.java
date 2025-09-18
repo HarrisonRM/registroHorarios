@@ -13,7 +13,6 @@ import lombok.Data;
 @AllArgsConstructor
 @Table(name = "Admin")
 public class Admin extends Empleado {
-    // private String privilegios; 
 
     @Column(name="privilegios", length=100, nullable = false)
     private String privileges;
