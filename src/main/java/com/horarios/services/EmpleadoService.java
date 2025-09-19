@@ -9,6 +9,7 @@ public interface EmpleadoService {
     Empleado createEmpleado(Empleado empleado);
     Empleado updateEmpleado(Long id, Empleado empleadoDetails);
     void deleteEmpleado(Long id);
+    // Considerar si este método debería ser más específico, como getEmpleadoPrivileges(Long empleadoId)
     List<String> getPrivileges();
 
 }

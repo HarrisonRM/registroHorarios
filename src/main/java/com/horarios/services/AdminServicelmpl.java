@@ -16,7 +16,7 @@ public class AdminServicelmpl implements AdminService {
     @Autowired
     private RegistroHorarioRepository registroHorarioRepository;
 
-    @Autowired
+    @Autowired 
     private AdminRepository adminRepository;
 
     @Override
@@ -43,11 +43,14 @@ public class AdminServicelmpl implements AdminService {
             admin.setPass(adminDetails.getPass());
             admin.setPrivileges(adminDetails.getPrivileges());
             return adminRepository.save(admin);
-        }).orElse(null);
+        }).orElseThrow(() -> new RuntimeException("Admin no encontrado con id: " + id));
     }
 
     @Override
     public void deleteAdmin(Long id) {
+        if (!adminRepository.existsById(id)) {
+            throw new RuntimeException("Admin no encontrado con id: " + id);
+        }
         adminRepository.deleteById(id);
     }
 

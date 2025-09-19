@@ -1,15 +1,18 @@
 package com.horarios.services;
 
+import com.horarios.model.Turno;
 import java.util.List;
 import java.util.Optional;
-import com.horarios.model.Turno;
 
 public interface turnoService {
-       
-    Optional<Turno> getTurnoById(Long id);
-    List<Turno> getAllTurnos();
-    Turno updateTurno(Long id, Turno turnoDetails);
-    void deleteTurno(Long id);
+
     Turno createTurno(Turno turno);
 
+    Optional<Turno> getTurnoById(Long id);
+
+    List<Turno> getAllTurnos();
+
+    Turno updateTurno(Long id, Turno turnoDetails);
+
+    void deleteTurno(Long id);
 }

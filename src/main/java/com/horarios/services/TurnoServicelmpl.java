@@ -9,23 +9,27 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class TurnoServicelmpl {
+public class TurnoServicelmpl implements turnoService {
 
     @Autowired
     private TurnoRepository turnoRepository;
 
+    @Override
     public List<Turno> getAllTurnos() {
         return turnoRepository.findAll();
     }
 
+    @Override
     public Optional<Turno> getTurnoById(Long id) {
         return turnoRepository.findById(id);
     }
 
+    @Override
     public Turno createTurno(Turno turno) {
         return turnoRepository.save(turno);
     }
 
+    @Override
     public Turno updateTurno(Long id, Turno turnoDetails) {
         return turnoRepository.findById(id).map(turno -> {
             if (turnoDetails.getName() != null) {
@@ -42,6 +46,7 @@ public class TurnoServicelmpl {
         }).orElseThrow(() -> new RuntimeException("Turno no encontrado con id: " + id));
     }
 
+    @Override
     public void deleteTurno(Long id) {
         if (!turnoRepository.existsById(id)) {
             throw new RuntimeException("Turno no encontrado con id: " + id);

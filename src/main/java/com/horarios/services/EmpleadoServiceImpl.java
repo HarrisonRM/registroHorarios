@@ -18,6 +18,9 @@ public class EmpleadoServiceImpl implements EmpleadoService {
 
     @Override
     public void deleteEmpleado(Long id) {
+        if (!empleadoRepository.existsById(id)) {
+            throw new RuntimeException("Empleado no encontrado con id: " + id);
+        }
         empleadoRepository.deleteById(id);
     }
 
@@ -39,12 +42,12 @@ public class EmpleadoServiceImpl implements EmpleadoService {
             empleado.setPosition(empleadoDetails.getPosition());
             empleado.setPass(empleadoDetails.getPass());
             return empleadoRepository.save(empleado);
-        }).orElse(null);
+        }).orElseThrow(() -> new RuntimeException("Empleado no encontrado con id: " + id));
     }
 
     @Override
     public List<String> getPrivileges() {
-        return null;
+        return java.util.Collections.emptyList();
     }
 }
 

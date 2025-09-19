@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface AdminService {
+    // Este método parece fuera de lugar aquí, debería estar en un servicio relacionado con RegistroHorario
     List<RegistroHorario> obtenerTodos();
     Optional<Admin> getAdminById(Long id);
     Admin createAdmin(Admin admin);
