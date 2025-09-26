@@ -24,4 +24,23 @@ public class TurnoController {
     public Turno crearTurno(@RequestBody Turno turno) {
         return turnoRepository.save(turno);
     }
+    @GetMapping("/{id}")
+    public Turno obtenerTurnoPorId(@PathVariable Long id) {
+        return turnoRepository.findById(id).orElse(null);
+    }
+    @PutMapping("/{id}")
+    public Turno actualizarTurno(@PathVariable Long id, @RequestBody Turno turnoActualizado) {
+        return turnoRepository.findById(id)
+                .map(turno -> {
+                    turno.setName(turnoActualizado.getName());
+                    turno.setStartTime(turnoActualizado.getStartTime());
+                    turno.setEndTime(turnoActualizado.getEndTime());
+                    return turnoRepository.save(turno);
+                })
+                .orElse(null);
+    }
+    @DeleteMapping("/{id}")
+    public void eliminarTurno(@PathVariable Long id) {
+        turnoRepository.deleteById(id);
+    }
 }

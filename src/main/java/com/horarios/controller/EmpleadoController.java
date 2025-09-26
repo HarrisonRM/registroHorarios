@@ -23,5 +23,23 @@ public class EmpleadoController {
     public Empleado crearEmpleado(@RequestBody Empleado empleado) {
         return empleadoRepository.save(empleado);
     }
+    @GetMapping("/{id}")
+    public Empleado obtenerEmpleadoPorId(@PathVariable Long id) {
+        return empleadoRepository.findById(id).orElse(null);
+    }
+    @PutMapping("/{id}")
+    public Empleado actualizarEmpleado(@PathVariable Long id, @RequestBody Empleado empleadoActualizado) {
+        return empleadoRepository.findById(id)
+                .map(empleado -> {
+                    empleado.setName(empleadoActualizado.getName());
+                    empleado.setDocument(empleadoActualizado.getDocument());
+                    empleado.setPosition(empleadoActualizado.getPosition());
+                    return empleadoRepository.save(empleado);
+                })
+                .orElse(null);
+    }
+    @DeleteMapping("/{id}")
+    public void eliminarEmpleado(@PathVariable Long id) {
+        empleadoRepository.deleteById(id);
+    }
 }
-
